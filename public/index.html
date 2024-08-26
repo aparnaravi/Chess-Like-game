@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn-based Chess-like Game</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            grid-template-rows: repeat(5, 50px);
+            gap: 2px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .A {
+            background-color: lightblue;
+        }
+        .B {
+            background-color: lightcoral;
+        }
+        .selected {
+            border: 3px solid yellow;
+        }
+        #controls {
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #history, #captured {
+            margin-top: 20px;
+        }
+        #history ul, #captured ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #history li, #captured li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Turn-based Game</h1>
+    <div id="status"></div>
+    <div id="board"></div>
+    <div id="controls"></div>
+    <div id="history">
+        <h2>Move History</h2>
+        <ul id="history-list"></ul>
+    </div>
+    <div id="captured">
+        <h2>Captured Characters</h2>
+        <ul id="captured-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
